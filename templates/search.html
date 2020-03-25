@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+    <script>
+        var movies = {{movies|tojson}} 
+        var searchResults = {{data|tojson}}
+        var indices = {{indices|tojson}}
+    </script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'search.js') }}"></script>
+<style>
+.card {display:inline-block;}
+</style>
+  
+    
+    
+   
+
+    <div id="searchResultsDiv" class = "container">
+    </div>
+
+
+{% endblock %}
+

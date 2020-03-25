@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+ 
+
+<script>
+    var currentid = {{current_id|tojson}} 
+ </script>
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'create.js') }}"></script>
+
+<div id="searchResultsDiv">
+</div>
+
+<div id="searchArea">
+
+    <form>
+        <!-- Default input -->
+        <div class="form-group" id="TitleGroup">
+          <input type="text" class="form-control" id="title" placeholder="Title">
+        </div>
+        </form>
+
+        <form>
+            <!-- Default input -->
+            <div class="form-group" id="DescriptionGroup">
+              <input type="text" class="form-control" id="description" placeholder="Description">
+            </div>
+            </form>
+
+            <form>
+                <!-- Default input -->
+                <div class="form-group" id="RatingGroup">
+                  <input type="text" class="form-control" id="Rating" placeholder="Rating">
+                </div>
+                </form>
+
+                <form>
+                    <!-- Default input -->
+                    <div class="form-group" id="URLGroup">
+                      <input type="text" class="form-control" id="URL" placeholder="URL">
+                    </div>
+                    </form>
+
+                    <form>
+                        <!-- Default input -->
+                        <div class="form-group" id="StarsGroup">
+                          <input type="text" class="form-control" id="stars" placeholder="Stars">
+                        </div>
+                        </form>
+
+                        <form>
+                            <!-- Default input -->
+                            <div class="form-group" id="ReviewGroup">
+                              <input type="text" class="form-control" id="userreview" placeholder="User Review">
+                            </div>
+                            </form>
+   
+
+    <button id="submit_name">Submit</button>
+</div>
+
+
+  
+    
+    
+   
+
+  
+
+
+{% endblock %}
+

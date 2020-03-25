@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+
+
+
+
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename = 'view.js') }}"></script>
+    
+    <script>
+        var movieResult = {{data|tojson}} 
+        var id = {{id|tojson}} 
+    </script>
+
+    <style>
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+        .whitedOut{
+            color: grey;
+            font-size: 10px; 
+        }
+        
+    </style>
+
+
+    <div class = "row no-gutters">
+        <div id ="viewArea"> 
+
+        </div>
+
+        <div id ="viewArea2"> 
+
+        </div>
+
+    </div>
+    
+    
+    <div id="viewItem">
+        <div class = "row"> 
+
+
+      
+
+
+      
+
+
+        <div class = "col-md-2" id = "Name">
+
+        </div>
+
+        <div class = "col-md-2" id = "Description">
+
+        </div>
+
+        <div class = "col-md-1" id = "Rating">
+
+        </div>
+
+        <div class = "col-md-2" id = "URL">
+
+        </div>
+
+        <div class = "col-md-1" id = "stars">
+
+        </div>
+
+        <div class = "col-md-1" id = "reviews">
+
+        </div>
+
+        </div>
+
+
+    </div>
+
+    <div id = "last">
+
+
+        <div class = "col-md-2" id = "editLink">
+
+        </div>
+
+    </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+<script>
+    var movieResults = {{movieResults|tojson}} 
+</script>
+
+<style>
+    #summary{
+        font-size:18px; 
+        margin-top:10px;
+        margin-bottom:10px; 
+
+    }
+
+    .card {display:inline-block;}
+</style>
+<div>
+
+    <div class = "container" id = "summary">
+        This database is for someone interested in viewing the most popular movies
+        in a given year. 
+    </div>
+
+    <div class = "container" id = "bootstrapCards">
+
+    </div>
+
+
+</div>
+{% endblock %}
